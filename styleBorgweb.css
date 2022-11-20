@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=Mouse+Memoirs&display=swap");
+
+* {
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/fondo.jpg);
+  background-size: cover;
+}
+
+button {
+  width: 300px;
+  height: 900px;
+  border: none;
+}
+
+.close-ensayo,
+.close-poesia,
+.close-relato {
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  background: none;
+}
+
+.show-poesia {
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: oblique;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-image: url(./img/poesía.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  border: solid white 5px;
+  box-sizing: border-box;
+}
+
+.show-relato {
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: oblique;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-image: url(./img/relato.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: solid white 5px;
+  box-sizing: border-box;
+}
+
+.show-ensayo {
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: oblique;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-image: url(./img/ensayo.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  border: solid white 5px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 10rem;
+}
+
+h2 {
+  text-align: right;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+p {
+  font-size: 3rem;
+  text-align: justify;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.poesia,
+.relato,
+.ensayo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-height: 80%;
+  height: auto;
+  text-align: center;
+  text-size-adjust: auto;
+  background-color: grey;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: solid white 5px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.audio-controls.style {
+  width: 75%;
+  position: absolute;
+  right: 5%;
+  top: 95%;
+  margin: 10px;
+}
+
+.poesia {
+  width: auto;
+  min-width: 50%;
+}
+
+::-webkit-scrollbar {
+  width: 6.5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 100px;
+  margin: 57px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 100px;
+}
+
+.overlay-poesia,
+.overlay-relato,
+.overlay-ensayo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 5;
+}
+
+@media (max-width: 400px) {
+  .show-modal {
+    flex-direction: column;
+  }
+}
